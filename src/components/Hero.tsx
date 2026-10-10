@@ -82,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
           playsInline
           preload="auto"
           poster="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=2000&q=85"
-          src={videoSrc}
+          src={"gemini_generated_video_94a8f82c.mp4"}
           onEnded={(e) => {
             e.currentTarget.currentTime = 0;
             e.currentTarget.play().catch(() => {});
