@@ -1,0 +1,6 @@
+{
+  "name": "San Andreas Car Wash & Detailing",
+  "description": "High-contrast GTA San Andreas street-style inspired premium car detailing and foam wash studio based in Los Santos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

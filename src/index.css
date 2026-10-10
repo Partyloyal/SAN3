@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Pricedown';
+  src: url('https://fonts.cdnfonts.com/s/4837/pricedown bl.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --gta-yellow: #FFE600;
+  --gta-yellow-glow: rgba(255, 230, 0, 0.45);
+}
+
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* GTA San Andreas Typography */
+.font-pricedown {
+  font-family: 'Pricedown', 'Pricedown Bl', 'Bebas Neue', 'Impact', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* High-contrast GTA Header Outlines */
+.gta-headline-yellow {
+  font-family: 'Pricedown', 'Pricedown Bl', 'Bebas Neue', Impact, sans-serif;
+  color: #FFE600;
+  text-shadow:
+    -3px -3px 0 #000000,
+     3px -3px 0 #000000,
+    -3px  3px 0 #000000,
+     3px  3px 0 #000000,
+    -4px  0px 0 #000000,
+     4px  0px 0 #000000,
+     0px -4px 0 #000000,
+     0px  4px 0 #000000,
+     0px  8px 24px rgba(0, 0, 0, 0.95);
+}
+
+.gta-headline-white {
+  font-family: 'Pricedown', 'Pricedown Bl', 'Bebas Neue', Impact, sans-serif;
+  color: #FFFFFF;
+  text-shadow:
+    -2px -2px 0 #000000,
+     2px -2px 0 #000000,
+    -2px  2px 0 #000000,
+     2px  2px 0 #000000,
+    -3px  0px 0 #000000,
+     3px  0px 0 #000000,
+     0px -3px 0 #000000,
+     0px  3px 0 #000000,
+     0px  6px 18px rgba(0, 0, 0, 0.9);
+}
+
+.gta-box-glow {
+  box-shadow: 0 0 25px rgba(255, 230, 0, 0.18), inset 0 0 15px rgba(255, 230, 0, 0.06);
+}
+
+.gta-box-glow-hover:hover {
+  box-shadow: 0 0 35px rgba(255, 230, 0, 0.35), inset 0 0 20px rgba(255, 230, 0, 0.1);
+}
+
+/* Foam animation keyframes */
+@keyframes foamDrip {
+  0% { transform: translateY(-10%) scaleY(1); opacity: 0.95; }
+  50% { transform: translateY(40%) scaleY(1.1); opacity: 0.85; }
+  100% { transform: translateY(110%) scaleY(1); opacity: 0.2; }
+}
+
+.animate-foam-drip {
+  animation: foamDrip 7s linear infinite;
+}
+
+/* Mission Passed Screen Animation */
+@keyframes missionBannerIn {
+  0% { transform: scale(1.4) translateY(-30px); opacity: 0; filter: blur(8px); }
+  100% { transform: scale(1) translateY(0); opacity: 1; filter: blur(0); }
+}
+
+.animate-mission-in {
+  animation: missionBannerIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
